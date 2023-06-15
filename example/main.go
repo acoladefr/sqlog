@@ -5,7 +5,7 @@ import "acolade.ch/sqlog"
 var logger *sqlog.Logger
 
 func main() {
-	logger = sqlog.NewLogger(sqlog.WithTable("logs"), sqlog.WithSQL(true))
+	logger = sqlog.NewLogger(sqlog.WithSQL(true), sqlog.WithTable("logs"))
 
 	err := logger.Init()
 	if err != nil {

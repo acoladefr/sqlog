@@ -12,9 +12,8 @@ import (
 )
 
 type Logger struct {
-	table      string
-	allowSQL   bool
-	envConnect bool
+	table    string
+	allowSQL bool
 }
 
 type Opts func(*Logger)
@@ -28,12 +27,6 @@ func WithTable(table string) Opts {
 func WithSQL(allowSQL bool) Opts {
 	return func(l *Logger) {
 		l.allowSQL = allowSQL
-	}
-}
-
-func WithEnvConnect(envConnect bool) Opts {
-	return func(l *Logger) {
-		l.envConnect = envConnect
 	}
 }
 
