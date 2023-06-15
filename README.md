@@ -28,18 +28,18 @@ import  "acolade.ch/sqlog"
 var  logger  *sqlog.Logger
 
 func  main()  {
-logger  = sqlog.NewLogger(sqlog.WithSQL(true), sqlog.WithTable("logs"))
+    logger  = sqlog.NewLogger(sqlog.WithSQL(true), sqlog.WithTable("logs"))
 
-_,  err  := logger.Init()
+    _,  err  := logger.Init()
 
-if err !=  nil  {
-	panic(err)
-}
+    if err !=  nil  {
+	    panic(err)
+    }
 
-// log in both database and console of type info that
-// gives information about the "daemon-initialization" process
-// and says that the daemon is listening on port 45912
-logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
+    // log in both database and console of type info that
+    // gives information about the "daemon-initialization" process
+    // and says that the daemon is listening on port 45912
+    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
 
 }
 ```
