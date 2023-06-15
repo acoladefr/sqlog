@@ -30,11 +30,16 @@ var  logger  *sqlog.Logger
 func  main()  {
     logger  = sqlog.NewLogger(sqlog.WithSQL(true), sqlog.WithTable("logs"))
 
+    //logger can insert log in the table "logs" of the database
+
     _,  err  := logger.Init()
 
     if err !=  nil  {
 	    panic(err)
     }
+
+    // the Init() method will create the desired table if it does not exist
+    // and return an error if the table cannot be initialized
 
     // log in both database and console of type info that
     // gives information about the "daemon-initialization" process
