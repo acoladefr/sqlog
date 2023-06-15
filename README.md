@@ -45,7 +45,7 @@ func  main()  {
     address := "127.0.0.1"
     port    := 45912
 
-    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on {0}:{1}", port, address)
+    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on {0}:{1}", address, port)
     // log in both database and console of type info that
     // gives information about the "daemon-initialization" process
     // and says that the daemon is listening on port 45912
