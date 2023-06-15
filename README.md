@@ -41,9 +41,9 @@ func  main()  {
     // the Init() method will create the desired table if it does not exist
     // and return an error if the table cannot be initialized
 
+    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
     // log in both database and console of type info that
     // gives information about the "daemon-initialization" process
     // and says that the daemon is listening on port 45912
-    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
 }
 ```
