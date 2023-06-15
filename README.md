@@ -23,7 +23,7 @@ You can take a look at file **example/main.go** but here is a classic example.
 ```go
 package  main 
 
-import  "acolade.ch/sqlog" 
+import  "github.com/acoladech/sqlog" 
 
 var  logger  *sqlog.Logger
 
@@ -40,6 +40,7 @@ func  main()  {
 
     // the Init() method will create the desired table if it does not exist
     // and return an error if the table cannot be initialized
+    // NOTE: if you do not use sql, you do not have to call Init()
 
     logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
     // log in both database and console of type info that
