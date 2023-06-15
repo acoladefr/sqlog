@@ -42,7 +42,10 @@ func  main()  {
     // and return an error if the table cannot be initialized
     // NOTE: if you do not use sql, you do not have to call Init()
 
-    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
+    address := "127.0.0.1"
+    port    := 45912
+
+    logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on {0}:{1}", port, address)
     // log in both database and console of type info that
     // gives information about the "daemon-initialization" process
     // and says that the daemon is listening on port 45912
