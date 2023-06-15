@@ -40,6 +40,5 @@ func  main()  {
     // gives information about the "daemon-initialization" process
     // and says that the daemon is listening on port 45912
     logger.Log(sqlog.INFO, sqlog.BOTH,  "daemon-initialization",  "daemon listening on :45912")
-
 }
 ```
