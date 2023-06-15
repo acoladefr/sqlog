@@ -1,6 +1,6 @@
 package main
 
-import "acolade.ch/sqlog"
+import "github.com/acoladech/sqlog"
 
 var logger *sqlog.Logger
 
