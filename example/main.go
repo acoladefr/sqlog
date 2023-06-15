@@ -7,7 +7,7 @@ var logger *sqlog.Logger
 func main() {
 	logger = sqlog.NewLogger(sqlog.WithSQL(true), sqlog.WithTable("logs"))
 
-	err := logger.Init()
+	_, err := logger.Init()
 	if err != nil {
 		panic(err)
 	}

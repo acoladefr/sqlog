@@ -42,12 +42,12 @@ func (l Logger) Table() string {
 	return l.table
 }
 
-func (l *Logger) Init() error {
+func (l *Logger) Init() (*Logger, error) {
 	l.Log(DEBUG, CONSOLE, "sqlog-init", "trying to connect to db")
 	db, err := sql.Open("mysql", os.Getenv("MYSQL_USERNAME")+":"+os.Getenv("MYSQL_PASSWORD")+"@tcp("+os.Getenv("MYSQL_HOST")+":"+os.Getenv("MYSQL_PORT")+")/"+os.Getenv("MYSQL_DB"))
 
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	defer db.Close()
@@ -62,11 +62,11 @@ func (l *Logger) Init() error {
 	);`)
 
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	l.Log(DEBUG, CONSOLE, "sqlog-init", "db ready; sqlog ready")
-	return nil
+	return nil, nil
 }
 
 type LEVEL uint8
