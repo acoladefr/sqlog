@@ -1,4 +1,4 @@
-module github.com/acoladechfrlog
+module github.com/acoladefr/sqlog
 
 go 1.20
 
